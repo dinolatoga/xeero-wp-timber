@@ -1,0 +1,18 @@
+<nav class="site-nav" role="navigation">
+	{% if main_menu %}
+	<ul>
+		{% for link in main_menu.get_items %}
+	  <li class="{{item.classes | join(' ')}}">
+	  	<a href="{{ link.get_path }}">{{ link.title }}</a>
+	    {% if link.get_children %}
+			  <ul>
+			    {% for child in link.get_children %}
+			      <li><a href="{{child.get_path}}">{{child.title}}</a></li>
+			    {% endfor %}
+			  </ul>
+			{% endif %}
+	  </li>
+	  {% endfor %}
+	</ul>
+	{% endif%}
+</nav>

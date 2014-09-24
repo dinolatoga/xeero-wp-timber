@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>{{wp_title}}</title>
+
+	{# Call the master stylesheet #}
+	<link href="{{ css_dir }}/master.css?ver={{asset_version}}" media="all" rel="stylesheet" type="text/css" />
+
+	{# Polyfills for IE8 and below #}
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<script>window.html5 || document.write("<script src="{{ js_dir }}/libs/html5.js"><\/script>")</script>
+	<![endif]-->
+	<script src="{{ js_dir }}/libs/rem.min.js"></script>
+
+	{# jQuery call with fallback #}
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="{{ js_dir }}/libs/jquery-1.11.1.min.js"><\/script>')</script>
+
+	{# Place for wordpress header scripts #}
+	{{ wp_head }}
+</head>
+<body class="{{body_class}}" >
+
+	{% include 'components/header.twig' %}
+
+	<main role="main">
+		{% block content %}
+		Sorry, no content
+		{% endblock %}
+	</main>
+
+	{% include 'components/footer.twig' %}
+
+	{# Place for wordpress footer scripts #}
+	{{ wp_footer }}
+
+	{# Call the main site script #}
+	<script src="{{ js_dir }}/global.min.js?ver={{asset_version}}"></script>
+
+</body>
+</html>
