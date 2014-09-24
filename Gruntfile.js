@@ -70,7 +70,7 @@ module.exports = function(grunt){
 						{
 							expand: true,
 							cwd: 'views/',
-							src: ['index.twig'],
+							src: ['style-guide.twig'],
 							dest: 'html/',
 							ext: '.html'
 						}
