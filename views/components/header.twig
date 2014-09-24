@@ -1,9 +1,11 @@
-<header>
+<header role="banner">
+
 	{# Site logo #}
-	{# site-logo is class so that it can be called and re-used #}
 	<div class="site-logo">
 		<a href="{{site.url}}">{{site.name}}</a>
 	</div>
+
 	{# Call the main navigation #}
 	{% include 'components/menu.twig' %}
+
 </header>

@@ -1,9 +1,6 @@
 {% extends "base.twig" %}
-
 {% block content %}
-
 	{% for post in posts %}
 		{% include ['components/summary-'~post.post_type~'.twig', 'components/summary.twig'] %}
 	{% endfor %}
-
 {% endblock %}
