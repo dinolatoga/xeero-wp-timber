@@ -58,6 +58,26 @@ module.exports = function(grunt){
 				}
 			},
 
+			output_twig: {
+				settings: {
+					options: {
+						docroot: 'views/',
+						context: {
+							"wp_title": "xeero"
+						}
+					},
+					files: [
+						{
+							expand: true,
+							cwd: 'views/',
+							src: ['index.twig'],
+							dest: 'html/',
+							ext: '.html'
+						}
+					]
+				}
+			},
+
 			watch: {
 				options: {
 					livereload: true,
@@ -79,7 +99,8 @@ module.exports = function(grunt){
 					tasks: ['imagemin']
 				},
 				twig: {
-					files: ['views/**/*.twig']
+					files: ['views/**/*.twig'],
+					tasks: ['output_twig']
 				}
 			},
 

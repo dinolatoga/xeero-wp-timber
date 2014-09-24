@@ -13,6 +13,7 @@
 		"grunt-contrib-imagemin": "*",
 		"grunt-autoprefixer": "*",
 		"grunt-contrib-cssmin": "*",
+		"grunt-output-twig": "*",
 		"matchdep": "*"
 	}
 }
