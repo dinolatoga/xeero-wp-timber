@@ -3,7 +3,7 @@
  * Theme Constants
  *
  * @package 	WordPress
- * @subpackage 	ZeeSS WP
+ * @subpackage 	Xeero WP
  * @author  Dino Latoga <dinolatoga@outlook.com>
  * @since	2014.07.07
  */

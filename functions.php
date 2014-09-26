@@ -3,7 +3,7 @@
  * Theme Functions
  *
  * @package 	WordPress
- * @subpackage 	ZeeSS
+ * @subpackage 	Xeero WP
  * @author  Dino Latoga <dinolatoga@outlook.com>
  * @since	2014.07.07
  */

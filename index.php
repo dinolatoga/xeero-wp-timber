@@ -2,7 +2,7 @@
 /**
  *
  * @package 	WordPress
- * @subpackage 	ZeeSS
+ * @subpackage 	Xeero WP
  * @since	2014.07.07
  */
 
