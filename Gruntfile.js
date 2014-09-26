@@ -101,7 +101,7 @@ module.exports = function(grunt){
 				twig: {
 					files: ['views/**/*.twig'],
 					tasks: ['output_twig']
-				}
+				},
 			},
 
 	});
