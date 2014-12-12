@@ -3,7 +3,7 @@
 	"version": "0.1.0",
 	"description": "A Timber based Starter WP Theme",
 	"author": "Dino Latoga",
-	"email": "dino@outlook.com.",
+	"email": "dinolatoga@outlook.com.",
 	"devDependencies": {
 		"grunt": "^0.4.5",
 		"grunt-contrib-concat": "*",
