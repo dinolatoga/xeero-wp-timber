@@ -1,19 +1,23 @@
 {
-	"name": "xeero-wp-timber",
-	"version": "0.1.0",
-	"description": "A Timber based Starter WP Theme",
+	"name": "xeero",
+	"version": "0.2.0",
+	"description": "A super basic WordPress Theme boilerplate",
 	"author": "Dino Latoga",
-	"email": "dinolatoga@outlook.com.",
 	"devDependencies": {
-		"grunt": "^0.4.5",
-		"grunt-contrib-concat": "*",
-		"grunt-contrib-uglify": "*",
-		"grunt-contrib-less": "*",
-		"grunt-contrib-watch":  "*",
-		"grunt-contrib-imagemin": "*",
-		"grunt-autoprefixer": "*",
-		"grunt-contrib-cssmin": "*",
-		"grunt-output-twig": "*",
-		"matchdep": "*"
+		"browser-sync": "^1.8.0",
+		"gulp": "^3.8.10",
+		"gulp-autoprefixer": "^2.0.0",
+		"gulp-concat": "^2.4.2",
+		"gulp-imagemin": "^2.0.0",
+		"gulp-jshint": "^1.9.0",
+		"gulp-less": "^2.0.1",
+		"gulp-livereload": "^3.0.2",
+		"gulp-load-plugins": "^0.8.0",
+		"gulp-minify-css": "^0.3.11",
+		"gulp-notify": "^2.1.0",
+		"gulp-rename": "^1.2.0",
+		"gulp-uglify": "^1.0.2",
+		"gulp-util": "^3.0.1",
+		"tiny-lr": "^0.1.4"
 	}
 }
