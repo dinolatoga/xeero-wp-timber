@@ -1,9 +1,17 @@
 /*
 Theme Name: Xeero WP Timber
-Theme URI:
+Theme URI: https://github.com/xymurgist/xeero-wp-timber
 Description: A Timber based Starter WP Theme
 Author: Dino Latoga
 Author URI: http://dinolatoga.com
-Version: 0.1.0
-NOTE: All styles are located inside the assets folder
+Version: 0.2.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: responsive-layout, fluid-layout
+Text Domain: xeerowp
+
+This is not your ordinary WordPress theme.
+This theme can't run without installing and activating the WordPress Timber Library.
+Why use Timber? Timber helps you create fully-customized WordPress themes faster with more sustainable code. Visit http://upstatement.com/timber/ for more details.
+All the scripts and styles are found under the assets folder.
 */
