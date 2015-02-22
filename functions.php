@@ -10,6 +10,7 @@
 
 require_once(dirname(__FILE__).'/includes/constants.php');
 require_once(dirname(__FILE__).'/includes/assets.php');
+require_once(dirname(__FILE__).'/includes/helpers.php');
 
 if (!class_exists('Timber')) {
 	add_action( 'admin_notices', function() use ($text, $class){
