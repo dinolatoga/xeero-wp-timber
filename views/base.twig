@@ -2,13 +2,14 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{{ wp_title }}</title>
 {{ wp_head }}{# Call wordpress header scripts #}
 </head>
 <body class="{{ body_class }}">
 {% include 'components/header.twig' %}
+{% include 'components/nav.twig' %}
 <main role="main">
 {% block content %}{% endblock %}
 </main>
