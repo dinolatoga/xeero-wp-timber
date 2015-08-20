@@ -7,25 +7,23 @@
 // @version 0.2.0
 
 // SETTINGS : Globally-available variables and config
-@import url('_variables.less');
+@import url('common/_variables.less');
+@import url('common/_global.less');
 
-// RESETS : sanitize basic styles
-@import url('_normalize.less');
-@import url('_resets.less');
+// MODULES : css resets and mixins
+@import url('modules/_normalize.less');
+@import url('modules/_resets.less');
+@import url('modules/_mixins.less');
 
-// TOOLS : Useful mixins
-@import url('_mixins.less');
+// COMPONENTS
+@import url('components/_buttons.less');
+@import url('components/_comments.less');
+@import url('components/_forms.less');
+@import url('components/_wp-classes.less');
 
-// BASE
-@import url('_base.less');
-
-// MODULES
-@import url('_modules.less');
-
-// CUSTOM
-@import url('_custom.less');
-
-// RESPONSIVE STYLES
-@import url('_mobile.less');
-@media (min-width: @tablet ) { @import url('_tablet.less'); }
-@media (min-width: @desktop ) { @import url('_desktop.less'); }
+// LAYOUT
+@import url('layouts/_header.less');
+@import url('layouts/_footer.less');
+@import url('layouts/_sidebar.less');
+@import url('layouts/_pages.less');
+@import url('layouts/_posts.less');

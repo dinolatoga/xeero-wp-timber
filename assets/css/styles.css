@@ -1,3 +1,10 @@
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -370,92 +377,36 @@ html {
 *:after {
   box-sizing: inherit;
 }
-html {
-  font-size: 62.5%;
-}
-body {
-  font-size: 1.6rem;
-  line-height: 1.6;
-}
 .button {
   display: inline-block;
   white-space: nowrap;
 }
+.comment-list ol {
+  list-style: none;
+}
 input {
   border: 1px solid #000000;
 }
-a {
-  color: #0088cc;
-  text-decoration: none;
-  -webkit-transition: all 0.3s ease-out;
-          transition: all 0.3s ease-out;
+.alignnone {
+  margin-left: 0;
+  margin-right: 0;
+  max-width: 100%;
 }
-a:hover {
-  color: #00aaff;
+.aligncenter {
+  display: block;
+  margin: 1rem auto;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0 0 2rem;
-  font-weight: normal;
-}
-h1 {
-  font-size: 4.0rem;
-  line-height: 1.2;
-  letter-spacing: -0.1rem;
-}
-h2 {
-  font-size: 3.6rem;
-  line-height: 1.25;
-  letter-spacing: -0.1rem;
-}
-h3 {
-  font-size: 3.0rem;
-  line-height: 1.3;
-  letter-spacing: -0.1rem;
-}
-h4 {
-  font-size: 2.4rem;
-  line-height: 1.35;
-  letter-spacing: -0.08rem;
-}
-h5 {
-  font-size: 1.8rem;
-  line-height: 1.5;
-  letter-spacing: -0.05rem;
-}
-h6 {
-  font-size: 1.5rem;
-  line-height: 1.6;
-  letter-spacing: 0;
-}
-ul {
-  list-style: disc inside;
-}
-ol {
-  list-style: decimal inside;
-}
-ul ul,
-ul ol,
-ol ol,
-ol ul {
-  margin: 1.5rem 0 1.5rem 3rem;
-  font-size: 90%;
-}
-li {
+.alignleft,
+.alignright {
   margin-bottom: 1rem;
 }
-table {
-  margin-bottom: 2rem;
-  border-left: 1px solid #000000;
-  border-bottom: 1px solid #000000;
-}
-th,
-td {
-  padding: 1rem;
-  border-right: 1px solid #000000;
-  border-top: 1px solid #000000;
+@media (min-width: 1024px) {
+  .alignleft {
+    float: left;
+    margin-right: 1rem);
+  }
+  .alignright {
+    float: right;
+    margin-left: 1rem;
+  }
 }
