@@ -36,15 +36,14 @@ class StarterSite extends TimberSite
 	function register_menus ()
 	{
 		register_nav_menus( array(
-			'main_menu' => 'Main Menu',
-			'footer_menu' => 'Footer Menu'
+			'main_nav' => 'Main Navigation'
 		) );
 	}
 
 	function add_to_context($context)
 	{
-		$context['main_menu'] = new TimberMenu('main_menu');
-		$context['footer_menu'] = new TimberMenu('footer_menu');
+		if ( has_nav_menu( 'main_nav' ) )
+			$context['main_nav'] = new TimberMenu('main_nav');
 		// constants
 		$context['asset_version'] = THEME_ASSET_VERSION;
 		$context['css_dir'] = THEME_CSS;

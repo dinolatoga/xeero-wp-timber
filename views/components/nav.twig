@@ -1,8 +1,8 @@
 <nav class="site-nav" role="navigation">
-	{% if main_menu %}
+	{% if main_nav %}
 	<ul>
-		{% for link in main_menu.get_items %}
-		<li class="{{ item.classes|join(' ') }}">
+		{% for link in main_nav.get_items %}
+		<li class="{{ link.classes|join(' ') }}">
 			<a href="{{ link.get_path }}">{{ link.title }}</a>
 			{% if link.get_children %}
 				<ul>
