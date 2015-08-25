@@ -7,7 +7,15 @@
 			{% if link.get_children %}
 				<ul class="sub-menu">
 					{% for child in link.get_children %}
-					<li><a href="{{ child.get_path }}">{{ child.title }}</a></li>
+					<li><a href="{{ child.get_path }}">{{ child.title }}</a>
+						{% if child.get_children %}
+							<ul class="sub-menu">
+								{% for grandchild in child.get_children %}
+								<li><a href="{{ grandchild.get_path }}">{{ grandchild.title }}</a></li>
+								{% endfor %}
+							</ul>
+						{% endif %}
+					</li>
 					{% endfor %}
 				</ul>
 			{% endif %}

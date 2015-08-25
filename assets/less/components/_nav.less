@@ -4,10 +4,21 @@
   .clearfix();
 }
 
-.sub-menu {}
+.sub-menu {
+  .hidden;
+  .box-reset;
+  width: auto;
+}
 
 .menu-item {
+  .relative;
   padding: 1rem;
+  &:hover {
+    .sub-menu {
+      .absolute;
+      .block;
+    }
+  }
   @media @tablet {
     .left;
   }
