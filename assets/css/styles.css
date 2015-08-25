@@ -469,8 +469,19 @@ html {
 .menu:after {
   clear: both;
 }
+.sub-menu {
+  display: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+}
 .menu-item {
+  position: relative;
   padding: 1rem;
+}
+.menu-item:hover .sub-menu {
+  position: absolute;
+  display: block;
 }
 @media only screen and (min-width: 768px) {
   .menu-item {
@@ -538,4 +549,18 @@ footer {
 }
 main {
   padding: 1rem;
+}
+.article {
+  margin-bottom: 1rem;
+}
+.article:before,
+.article:after {
+  content: "";
+  display: table;
+}
+.article:after {
+  clear: both;
+}
+.article-title {
+  font-size: 3rem;
 }
