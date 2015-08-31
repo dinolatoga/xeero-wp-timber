@@ -4,9 +4,12 @@ html {
 body {
   font-size: 1.6rem;
   line-height: 1.6;
+  background-color: #e6e6e6;
+  color: #000000;
 }
 img {
   max-width: 100%;
+  height: auto;
 }
 a {
   color: #0088cc;
@@ -455,6 +458,17 @@ html {
 *:after {
   box-sizing: inherit;
 }
+.nav {
+  display: none;
+}
+@media only screen and (min-width: 1024px) {
+  .nav {
+    position: absolute;
+    display: block;
+    top: 2rem;
+    right: 2rem;
+  }
+}
 .menu {
   margin: 0;
   padding: 0;
@@ -536,19 +550,25 @@ input {
   }
 }
 header {
-  padding: 1rem;
+  padding: 2rem;
+  background-color: #ffffff;
 }
 .site-logo h1 {
   font-size: 4rem;
+  margin: 0;
+  padding: 0;
 }
 .site-logo h1 a {
   text-decoration: none;
 }
 footer {
-  padding: 1rem;
+  padding: 2rem;
+  background-color: #ffffff;
 }
 main {
-  padding: 1rem;
+  padding: 2rem;
+  margin: 2.5rem 5rem;
+  background-color: #ffffff;
 }
 .article {
   margin-bottom: 1rem;
