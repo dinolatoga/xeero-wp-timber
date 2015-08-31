@@ -8,12 +8,12 @@
 {{ wp_head }}{# Call wordpress header scripts #}
 </head>
 <body class="{{ body_class }}">
-{% include 'components/header.twig' %}
-{% include 'components/nav.twig' %}
-<main role="main">
-{% block content %}{% endblock %}
-</main>
-{% include 'components/footer.twig' %}
+  {% include 'components/header.twig' %}
+  {% include 'components/nav.twig' %}
+  <main role="main">
+  {% block content %}{% endblock %}
+  </main>
+  {% include 'components/footer.twig' %}
 {{ wp_footer }}{# Call wordpress footer scripts #}
 </body>
 </html>
