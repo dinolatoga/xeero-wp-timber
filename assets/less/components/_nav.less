@@ -1,4 +1,12 @@
-.nav {}
+.nav {
+  .hidden;
+  @media @desktop {
+    .absolute;
+    .block;
+    top: 2rem;
+    right: 2rem;
+  }
+}
 .menu {
   .clearlist();
   .clearfix();
