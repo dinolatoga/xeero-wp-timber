@@ -4,17 +4,19 @@ html { font-size: 62.5%; }
 body{
 	font-size: 1.6rem;
 	line-height: @baseLineHeight;
+	background-color: @body-bg;
+	color: @body-color;
 }
-
 img {
 	max-width: 100%;
+	height: auto;
 }
 // content styles
 a {
-	color: @hyperlink;
+	color: @link-color;
 	text-decoration: none;
 	transition: all 0.3s ease-out;
-	&:hover { color: @hyperlink-hover; }
+	&:hover { color: @linkhover-color; }
 }
 h1, h2, h3, h4, h5, h6 {
 	margin: 0 0 2rem;
