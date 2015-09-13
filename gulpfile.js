@@ -4,59 +4,53 @@ var gulp = require('gulp'),
 		browserSync = require('browser-sync');
 		reload = browserSync.reload;
 
-// Styles
-gulp.task('styles', function() {
-	gulp.src('assets/less/styles.less')
+// Less
+gulp.task('less', function() {
+	gulp.src('assets/less/**/[^_]*.less')
 		.pipe(plugins.less())
+		.pipe(plugins.pleeease({
+			autoprefixer: {
+				browsers: ['last 2 versions']
+			}
+		}))
 		.on('error', plugins.util.log)
-		.pipe(plugins.autoprefixer('last 2 versions', 'ie 9', 'ios 6', 'android 4'))
-		.pipe(gulp.dest('assets/css'))
 		.pipe(plugins.rename({ suffix: '.min' }))
-		.pipe(plugins.minifyCss())
+		.pipe(gulp.dest('assets/build/css'))
 		.pipe(reload({stream:true}))
-		.pipe(gulp.dest('assets/css'))
 		.pipe(plugins.livereload())
 		.pipe(plugins.notify({ message: 'Styles task complete' }));
 });
 
-// Scripts
-gulp.task('scripts', function() {
-	gulp.src(['assets/js/*.js', '!assets/js/*.min.js'])
+// Javascript
+gulp.task('js', function() {
+	gulp.src(['assets/js/*.js'])
 		.pipe(plugins.jshint())
 		.pipe(plugins.jshint.reporter('default'))
-		//.pipe(plugins.concat('main.js'))
-		.pipe(gulp.dest('assets/js'))
-		.pipe(plugins.rename({ suffix: '.min' }))
+		//.pipe(plugins.concat('scripts.js'))
 		.pipe(plugins.uglify())
+		.pipe(plugins.rename({ suffix: '.min' }))
+		.pipe(gulp.dest('assets/build/js'))
 		.pipe(reload({stream:true}))
-		.pipe(gulp.dest('assets/js'))
 		.pipe(plugins.livereload())
 		.pipe(plugins.notify({ message: 'Scripts task complete' }));
 });
 
-// Images
-gulp.task('images', function() {
-	gulp.src('assets/images/**/*')
-		.pipe(plugins.imagemin({ optimizationLevel: 7, progressive: true, interlaced: true }))
+// Imagemin
+gulp.task('imagemin', function() {
+	gulp.src('assets/images/**/*.{png,jpg,gif,svg}')
+		.pipe(plugins.imagemin({
+			optimizationLevel: 7,
+			progressive: true,
+			interlaced: true }))
+		.pipe(gulp.dest('assets/build/images'))
 		.pipe(reload({stream:true}))
-		.pipe(gulp.dest('assets/images'))
 		.pipe(plugins.notify({ message: 'Images task complete' }));
 });
 
-// HTML
-gulp.task('twig', function() {
-	gulp.src('views/*.twig')
-		.pipe(reload({stream:true}))
-		.pipe(plugins.livereload())
-		.pipe(plugins.notify({ message: 'Templates has been updated.' }));
-});
-
-gulp.task('watch', function() {
+// 'gulp'
+gulp.task('default', function() {
 	plugins.livereload.listen();
-	gulp.watch('assets/less/**/*.less', ['styles']);
-	gulp.watch('assets/js/**/*.js', ['scripts']);
-	gulp.watch('assets/images/**/*', ['images']);
-	gulp.watch('*.twig', ['twig']);
+	gulp.watch('assets/less/**/*.less', ['less']);
+	gulp.watch('assets/js/**/*.js', ['js']);
+	gulp.watch('assets/images/**/*.{png,jpg,gif,svg}', ['imagemin']);
 });
-
-gulp.task('default', ['styles', 'scripts', 'watch' ]);
