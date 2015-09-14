@@ -4,16 +4,18 @@
 <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+{% if function('current_theme_supports', 'title-tag') %}
 <title>{{ wp_title }}</title>
+{% endif %}
 {{ wp_head }}{# Call wordpress header scripts #}
 </head>
 <body class="{{ body_class }}">
-  {% include 'components/header.twig' %}
-  {% include 'components/nav.twig' %}
-  <main role="main">
-  {% block content %}{% endblock %}
-  </main>
-  {% include 'components/footer.twig' %}
+	{% include 'components/header.twig' %}
+	{% include 'components/nav.twig' %}
+	<main role="main">
+	{% block content %}{% endblock %}
+	</main>
+	{% include 'components/footer.twig' %}
 {{ wp_footer }}{# Call wordpress footer scripts #}
 </body>
 </html>
