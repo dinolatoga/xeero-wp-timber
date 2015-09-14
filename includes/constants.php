@@ -9,6 +9,9 @@
  */
 define('THEME_ASSET_VERSION', '0.1.0');
 define( 'THEME_URI', get_stylesheet_directory_uri() );
-define( 'THEME_IMAGES', THEME_URI . '/assets/images' );
-define( 'THEME_CSS', THEME_URI . '/assets/css' );
-define( 'THEME_JS', THEME_URI . '/assets/js' );
+define( 'THEME_IMAGES', THEME_URI . '/assets/build/images' );
+define( 'THEME_CSS', THEME_URI . '/assets/build/css' );
+define( 'THEME_JS', THEME_URI . '/assets/build/js' );
+
+// Google Analytics
+define( 'ANALYTICS_ID', 'UA-XXXXXXXX-X');
